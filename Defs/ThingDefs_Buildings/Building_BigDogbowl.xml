@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>BigDogbowl</defName>
+    <label>Big Dog bowl</label>
+    <description>A big bowl where you put corpses and meat</description>
+    <thingClass>Building_Storage</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <designationCategory>Misc</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>25</pathCost>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <useHitPoints>true</useHitPoints>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Dogbowl/dogbowl_back</texPath>
+      <drawSize>(2.1,2.1)</drawSize>
+    </graphicData>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Dogbowl/dogbowl_blueprint</texPath>
+      <shaderType>Transparent</shaderType>
+    </blueprintGraphicData>
+    <uiIconPath>Things/Building/Dogbowl/dogbowl</uiIconPath>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Never</tickerType>
+    <surfaceType>Eat</surfaceType>
+    <drawDamagedOverlay>false</drawDamagedOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <WorkToBuild>1000</WorkToBuild>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+    <building>
+      <expandHomeArea>true</expandHomeArea>
+      <repairable>true</repairable>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>CorpsesHumanlike</li>
+            <li>CorpsesAnimal</li>
+          </categories>
+          <disallowedSpecialFilters>
+            <li>AllowPlantFood</li>
+          </disallowedSpecialFilters>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="Test.CompProperties_SecondLayer">
+        <graphicData>
+          <texPath>Things/Building/Dogbowl/dogbowl_front</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(2.2,2.2)</drawSize>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
